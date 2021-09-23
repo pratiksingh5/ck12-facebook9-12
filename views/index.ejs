@@ -26,6 +26,12 @@
                 <input type="text" name="name" placeholder="Name" required>
                 <input type="email" name="email" placeholder="Email" required>
                 <input type="password" name="password" placeholder="Password" required>
+                <% if(errors){ %>
+                  <% errors.forEach(function(err){ %>
+                  <small> <%= err.msg %> </small>   
+               <%  })%>
+                 
+                <%} %>
                 <input type="username" name="username" placeholder="Username" required>
                 <input type="submit" value="Register as an User">
                 <a href="/login">Already have an account ?</a>
