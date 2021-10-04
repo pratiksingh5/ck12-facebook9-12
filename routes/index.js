@@ -78,10 +78,8 @@ router.get("/timeline", function (req, res) {
   userModel.findOne({username:req.session.passport.user}).populate('posts')
   .then(function(foundUser){
     res.render("timeline",{foundUser});
-
   })
 });
-
 
 
 router.post('/post', function (req, res) {
